@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox Justify-Self Demonstration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      width: 400px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      height: 60px;
+      align-items: center;
+    }
+
+    .box {
+      background-color: lightgreen;
+      width: 60px;
+      height: 40px;
+      margin: 0 5px;
+    }
+
+    
+    .no-space {
+      justify-content: flex-start;
+    }
+
+    
+    .spaced {
+      justify-content: space-around;
+    }
+
+    .start {
+      align-self: flex-start;
+    }
+
+    .end {
+      align-self: flex-end;
+    }
+  </style>
+</head>
+<body>
+
+  <h3>Flexbox Justify-Self Demonstration</h3>
+
+  
+  <div class="container no-space">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+  <p><code>justify-self</code> will do nothing, because there is no space to distribute</p>
+
+  <!-- With space -->
+  <div class="container spaced">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+  <p>Now that we have space to distribute we can use <code>justify-self</code></p>
+
+  
+  <div class="container spaced">
+    <div class="box start"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+  <p><code>justify-self: flex-start;</code></p>
+
+  
+  <div class="container spaced">
+    <div class="box end"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+  <p><code>justify-self: flex-end;</code></p>
+
+  
+  <div class="container spaced">
+    <div class="box start"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+  <p><code>justify-self: flex-start;</code></p>
+
+</body>
+</html>

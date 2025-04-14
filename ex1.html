@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flexbox Layout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 5px;
+      background: #fff;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .header,
+    .footer {
+      text-align: center;
+      padding: 20px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .header {
+      background-color: #00cfff;
+    }
+
+    .footer {
+      background-color: orange;
+    }
+
+    .row {
+      display: flex;
+      gap: 1px;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      flex:1;
+      gap: 5px;
+    }
+
+    .hero {
+      background-color: rgb(241, 192, 241);
+      padding: 45px;
+      color: white
+    }
+
+    .sidebar {
+      background-color: yellowgreen;
+      padding: 85px;
+      color: white;
+    }
+
+    .main-content {
+
+      background-color: gold;
+      padding: 85px;
+      color: white;
+    }
+
+    .extra-content {
+      background-color: gray;
+      padding: 25px;
+      color: white;
+    }
+
+    .related-images {
+      background-color: rgba(39, 242, 127, 0.805);
+      padding: 20px;
+      flex: 2;
+      color: white;
+    }
+
+    .related-posts {
+      background-color: pink;
+      padding: 5px;
+      color: white;
+
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">Header</div>
+
+    <div class="row">
+      <div class="column">
+        <div class="hero">Hero</div>
+        <div class="sidebar">Sidebar</div>
+      </div>
+      <div class="column">
+        <div class="main-content">Main Content
+             <small>*If things do not look right, make sure your browser is in "Experimental Mode"</small>
+</div>
+        <div class="extra-content">Extra Content</div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="related-images">Related Images</div>
+      <div class="related-posts">Related Posts</div>
+    </div>
+
+    <div class="footer">Footer</div>
+  </div>
+</body>
+</html>
